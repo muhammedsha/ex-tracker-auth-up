@@ -1,0 +1,11 @@
+## YAML Template.
+---
+spring:
+  application:
+    name: zuulsrvr
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true

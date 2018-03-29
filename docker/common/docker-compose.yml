@@ -1,0 +1,34 @@
+## YAML Template.
+---
+    confgserver:
+       image: notix/confgserver:n1
+       ports:
+         - "8888:8888"
+    eurekaserver:
+       image: notix/eurekaserver:n1
+       ports:
+         - "8761:8761"
+    ##zuulsrvr:
+      ## image: notix/zuulsrvr:n1
+      ## ports:
+       ##  - "5555:5555"
+       
+            
+   ## helloworld:
+     ##  image: notix/helloworld:n1
+     ##  ports:
+     ##    - "8080:8080"
+    ##authenticationservice:
+     ## image: notix/authenticationservice:n1
+     ## ports:
+      ##  - "8901:8901"  
+        
+    authserver:
+      image: notix/authserver:n1
+      ports:
+        - "8081:8081"  
+        
+    ##authclient:
+      ##image: notix/authclient:n1
+     ## ports:
+        ##- "8082:8082"  
