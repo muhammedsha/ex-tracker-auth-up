@@ -31,7 +31,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter{
         clients.inMemory()
                 .withClient("helloworld")
                 .secret("passcode")
-                .authorizedGrantTypes("refresh_token", "password", "client_credentials")
+                .authorizedGrantTypes("refresh_token", "password", "client_credentials","authorization_code")
                 .scopes("webclient", "mobileclient");
     }
 
