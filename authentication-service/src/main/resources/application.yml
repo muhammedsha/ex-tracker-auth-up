@@ -17,6 +17,6 @@ eureka:
         defaultZone: http://localhost:8761/eureka/
 
 server:
-  context-path: /hello
+  context-path: /hello/
   port: 8901
   

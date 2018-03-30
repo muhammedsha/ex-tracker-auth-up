@@ -11,13 +11,14 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 
 /**
  *
  * @author jibin
  */
-
+@EnableAuthorizationServer
 @Configuration
 public class OAuth2Config extends AuthorizationServerConfigurerAdapter{
     @Autowired
@@ -31,8 +32,9 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter{
         clients.inMemory()
                 .withClient("helloworld")
                 .secret("passcode")
-                .authorizedGrantTypes("refresh_token", "password", "client_credentials","authorization_code")
-                .scopes("webclient", "mobileclient");
+                .authorizedGrantTypes("authorization_code")
+                .scopes("webclient", "mobileclient")
+                .autoApprove(true);
     }
 
     @Override
