@@ -1,13 +1,15 @@
 ## YAML Template.
 ---
-    confgserver:
-       image: notix/confgserver:n1
-       ports:
-         - "8888:8888"
+    
     eurekaserver:
        image: notix/eurekaserver:n1
        ports:
          - "8761:8761"
+         
+    confgserver:
+       image: notix/confgserver:n1
+       ports:
+         - "8888:8888"
     ##zuulsrvr:
       ## image: notix/zuulsrvr:n1
       ## ports:
