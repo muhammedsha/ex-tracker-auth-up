@@ -1,5 +1,6 @@
 package com.notix;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.boot.SpringApplication;
@@ -19,17 +20,19 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableResourceServer
 @EnableAuthorizationServer
 @EnableEurekaClient
+@RequestMapping("/user")
 public class AuthenticationServiceApplication {
-    
-    
-    @RequestMapping(value = "/user", produces = "application/json")
-    @GetMapping()
-    public Map<String, Object> user(OAuth2Authentication user) {
+   
+    @GetMapping("/principal")
+    public Principal user(Principal principal) {
+        return principal;
+    }
+   /* public Map<String, Object> user(OAuth2Authentication user) {
         Map<String, Object> userInfo = new HashMap<>();
         userInfo.put("user", user.getUserAuthentication().getPrincipal());
         userInfo.put("authorities", AuthorityUtils.authorityListToSet(user.getUserAuthentication().getAuthorities()));
         return userInfo;
-    }
+    }*/
 
 
 
