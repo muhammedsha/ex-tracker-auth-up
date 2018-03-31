@@ -44,8 +44,8 @@
 		</plugins>
     </build>
     <modules>
-        <module>confg-server</module>
         <module>eureka-server</module>
+        <module>confg-server</module>
         <module>zuul-srvr</module>
         <module>hello-world</module>
         <module>authentication-service</module>
