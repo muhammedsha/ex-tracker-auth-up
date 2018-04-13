@@ -20,6 +20,8 @@ eureka:
     serviceUrl:
         defaultZone: http://localhost:8761/eureka/
         
+        
+zuul.sensitiveHeaders: Cookie,Set-Cookie
 ##zuul:
   ##  prefix: /api
     ##routes:
