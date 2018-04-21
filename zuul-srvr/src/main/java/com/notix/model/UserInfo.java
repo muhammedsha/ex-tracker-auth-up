@@ -11,17 +11,17 @@ package com.notix.model;
  */
 public class UserInfo {
 
-    String organizationId;
+    //String organizationId;
     String userId;
 
-    public String getOrganizationId() {
+    /*public String getOrganizationId() {
         return this.organizationId;
     }
 
 
     public void setOrganizationId(String organizationId) {
         this.organizationId = organizationId;
-    }
+    }*/
 
     public String getUserId() {
         return userId;

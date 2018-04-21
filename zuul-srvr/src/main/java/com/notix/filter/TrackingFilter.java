@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 
 /**
  *
@@ -37,6 +38,7 @@ public class TrackingFilter extends ZuulFilter {
         return FILTER_ORDER;
     }
 
+    @Override
     public boolean shouldFilter() {
         return SHOULD_FILTER;
     }
@@ -64,7 +66,7 @@ public class TrackingFilter extends ZuulFilter {
             filterUtils.setCorrelationId(generateCorrelationId());
             logger.debug("tmx-correlation-id generated in tracking filter: {}.", filterUtils.getCorrelationId());
         }
-
+       
         return null;
     }
     
